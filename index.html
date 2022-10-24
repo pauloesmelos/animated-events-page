@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="paulo melos">
+        <meta name="keywords" content="animais fantasticos,projeto 1,curso javascript,css flexbox,css grid">
+        <meta name="description" content="projeto 1 do curso de javascript, com o nome de animais fantásticos">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Animais Fantásticos</title>
+        <link rel="stylesheet"  href="style.css">
+    </head>
+
+    <body>
+    <div class="container-grid">
+        
+        <header class="menu">
+            <nav class="menu-nav">
+                <ul class="ul-nav">
+                    <li data-dropdown class="li-nav">
+                        <a class="a-nav" href="#animais">Animais</a>
+                        <ul class="menu-dropdown">
+                            <li class="li-dropdown"><a href="#">Esquilo</a></li>
+                            <li class="li-dropdown"><a href="#">Raposa</a></li>
+                            <li class="li-dropdown"><a href="#">Esquilo</a></li>
+                            <li class="li-dropdown"><a href="#">Urso</a></li>
+                            <li class="li-dropdown"><a href="#">Leão</a></li>
+                        </ul>
+                    </li>
+
+                    <li data-dropdown class="li-nav">
+                        <a class="a-nav" href="sobre.html">Sobre</a>
+                        <ul class="menu-dropdown">
+                            <li class="li-dropdown"><a href="#">A empresa</a></li>
+                            <li class="li-dropdown"><a href="#">Sócios</a></li>
+                            <li class="li-dropdown"><a href="#">Investimentos</a></li>
+                            <li class="li-dropdown"><a href="#">Patrocínios</a></li>
+                        </ul>
+                    </li>
+                    <li class="li-nav"><a class="a-nav" href="#faq">Faq</a></li>
+                    <li class="li-nav"><a class="a-nav" href="#contato" class="clique">Contato</a></li>
+                    <li class="quebrado li-nav"><a class="a-nav" data-modal="entrar" href="login.html">Login ➔</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+            <section class="grid descricao-animais js-section" id="animais">
+               
+                    <h1 class="titulo">Animais Fantásticos</h1>
+                    <ul class="ul-imagens">
+                        <li><img src="./img/imagem1.jpg" alt=""></li>
+                        <li><img src="./img/imagem2.jpg" alt=""></li>
+                        <li><img src="./img/imagem3.jpg" alt=""></li>
+                        <li><img src="./img/imagem4.jpg" alt=""></li>
+                        <li><img src="./img/imagem5.jpg" alt=""></li>
+                    </ul>
+                
+            <div class="desc">                   
+                <section class="esquilo" data-show="down">
+                    <h2>Esquilo</h2>
+                    <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte, conhecida como Sciuridae.</p>
+                    <p>No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe, quatimirim, quatipuru, agutipuru ou acutipuru. Na Galiza e em algumas zonas de Portugal, também são conhecido por esquio.</p>
+                    <p>Este animal pode ser encontrado no mundo todo, menos na Austrália.</p>
+                </section>
+
+                <section class="raposa" data-show="right">
+                    <h2>Raposa</h2>
+                    <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+                    <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do qual a raposa vermelha é a mais comum.</p>
+                </section>
+
+                <section class="urso" data-show="down">
+                    <h2>Urso</h2>
+                    <p>Os Ursos constituem uma família de mamíferos plantígrados, geralmente de grande porte, contendo os ursos e os pandas. Algumas características comuns dos ursos são pelagem espessa, rabo curto, o olfato desenvolvido e as garras não retráteis.</p>
+                    <p>A maioria dos ursos costumam preparar-se para hibernar durante o inverno, comendo grandes quantidades de comida antes de entrar em uma toca para o período de sono profundo</p>
+                    <p>Os ursos existem em todos os continentes, em exceção na África, embora algumas fontes afirmem terem avistado o Urso nandi, mas sem comprovarem a sua existência.</p>
+                </section>
+
+                <section class="leao" data-show="right">
+                    <h2>Leão</h2>
+                    <p>O leão é um mamífero pertencente à ordem Carnivora e família Felidae, sendo conhecido como “rei das selvas”. Ele se alimenta de outros animais, como gnus e zebras, e vive em grupos, que apresentam divisões bem marcadas, sendo o macho responsável pela defesa do grupo e a fêmea pela caça e cuidado com os filhotes.</p>                
+                    <p>Apesar de serem admirados por sua força, atualmente as populações de leões estão em declínio, sendo a espécie classificada como vulnerável pela IUCN (sigla em inglês para União Internacional para a Conservação da Natureza).</p>                   
+                    <p>Os leões costumam ser divididos em subpopulações asiáticas e subpopulações africanas. Neste texto falaremos mais a respeito do leão-africano.</p>
+                    
+                </section>
+
+                <section class="macaco" data-show="down">
+                    <h2>Macaco</h2>
+                    <p>Macaco é um termo de origem africana utilizado como designação comum a todas as espécies de símios ou primatas antropoides.</p>
+                    <p>É aplicada restritivamente no Brasil aos cebídeos em geral. No sentido estrito, "macaco" refere-se às espécies de primatas pertencentes ao género Macaca. </p>
+                    <p>Os macacos são animais importantes para o meio ambiente, atuando, por exemplo, na dispersão de espécies vegetais.</p>
+                </section>
+            </div>
+            </section>
+
+            <section class="grid faq js-section" id="faq">
+                <h1 class="titulo">FAQ</h1>
+                <dl>
+                    <dt>Qual a idade dos animais?</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed soluta ducimus repellendus delectus earum molestiae dolores, illum laudantium repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.</dd>
+
+                    <dt>Eles são fantásticos?</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error repellendus doloremque explicabo minima fugit veniam ullam ex magni dicta quo.</dd>
+
+                    <dt>Qual a diferença?</dt>
+                    <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe enim, quia blanditiis excepturi fugiat, eveniet assumenda maiores ad non in ab? Odit nihil quasi doloribus?Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.</dd>
+
+                    <dt>Como proteger?</dt>
+                    <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quidem pariatur ducimus voluptatem soluta laboriosam quas? Dolorem minima ullam ipsam alias laudantium suscipit, quod omnis id sit illo? Quia, similique.</dd>
+                </dl>
+            </section>
+
+            <section class="grid faq js-section" id="faq">
+                <h1 class="titulo">Sobre nós</h1>
+                <dl>
+                    <dt> Quando fomos fundados?</dt>
+                    <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed soluta ducimus repellendus delectus earum molestiae dolores, illum laudantium repudiandae.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.</dd>
+
+                    <dt>Nossa missão.</dt>
+                    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error repellendus doloremque explicabo minima fugit veniam ullam ex magni dicta quo.</dd>
+
+                    <dt>Qual a diferença?</dt>
+                    <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe enim, quia blanditiis excepturi fugiat, eveniet assumenda maiores ad non in ab? Odit nihil quasi doloribus?Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.</dd>
+
+                    <dt>Seja membro.</dt>
+                    <dd>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi quidem pariatur ducimus voluptatem soluta laboriosam quas? Dolorem minima ullam ipsam alias laudantium suscipit, quod omnis id sit illo? Quia, similique.</dd>
+                </dl>
+            </section>
+
+            <section class="grid contato js-section" id="contato">
+                <h1 class="titulo">Contato</h1>
+                <div class="div-iframe" data-tooltip aria-label="Rua dos Imigrantes, Raposo Tavares 123">
+                    <img src="./img/mapa.png" alt="localização" class="mapa">
+                </div>
+                <ul class="ul-contato">
+                    <li>paulo.melos@sou.unifal-mg.edu.br</li>
+                    <li>+55 (35) 991897871</li>
+                    <li>Avenida Machado de Assis, 465</li>
+                    <li>Alfenas - MG</li>
+                </ul>
+            </section>
+        
+        
+        <div class="div-footer">
+            <footer>
+                <p>2022 - &copy; Todos direitos reservados a paulo melos </p>
+            </footer>
+        </div>
+
+        <section data-modal="section-modal" class="section-modal">
+            <div data-modal="modal" class="modal">
+                <button class="sair" data-modal="sair">X</button>
+                <form action="">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha">
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+        </section>
+        
+        <script type="module" src="./js/script.js"></script>
+    </div>    
+    </body>
+
+  
+ </html>

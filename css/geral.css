@@ -1,0 +1,282 @@
+ /*GRID: PRIMEIRO JOGUEI TODAS SEÇÕES UMA NA FRENTE DA OUTRA*/
+ /*default*/
+ *{
+    margin: 0;
+    padding: 0;
+ }
+ img{
+    max-width: 100%;
+    display: block;/*img ja tem propriedade de bloco*/
+ }
+ /*IMPORTANTE,QUANDO TRABALHAMOS COM GRID É ESSENCIAL SEPARAR/ENGLOBAR TODO O SITE EM TAGS(SEMÂNTICAS OU DIVS)COM A EXATA QUANTIDADE DE ELEMENTOS QUE CRIAREMOS DO grid-template-columns**/
+ body{ 
+    background-color: rgb(255, 234, 196);
+ /*IMPORTANTE : CRIA O TEMPLATE COM OS 4 CONTAINERS PRINCIPAIS DO BODY*/
+ }
+ .container-grid{
+   display: grid;
+   grid-template-columns: 1fr 180px minmax(300px,800px) 1fr;
+ }
+/*fim default*/
+
+/*css menu*/
+.menu{ /*SUUUPER IMPORTANTE: SEMPRE QUE FOR APLICAR UMA PROPRIEDADE DO GRID ITEM APLICAR DIRETAMENTE NOS FILHOS DO GRID(CONTAINERS PRINCIPAIS QUE ENGLOBAM TODO O SITE E SÃO REFERENCIADOS no grid-template-columns)**/
+   /*O GRID NESTE PROJETO É O BODY*/
+   grid-column: 3/5;
+   padding: 40px;
+   background-color: rgb(247, 170, 55);
+   margin-top: 20px;
+}
+.ul-nav{
+   display: flex;
+   flex-wrap: wrap; /*pensando em telas pequenas*/
+} 
+.ul-nav .li-nav{
+   list-style-type: none;
+}
+.a-nav{
+   text-decoration: none;
+   margin-right: 30px;
+   color: #222;
+   font-family: sans-serif;
+   font-weight: bolder;
+   text-transform: uppercase;
+   font-size: 20px;
+   letter-spacing: .0.5em; /*DÁ UM PEQUENO ESPAÇAMENTO ENTRE AS LETRAS*/
+   transition: 0.2s;
+}
+.li-nav a:hover{
+   color: #fff;
+   border: none;
+}
+.quebrado{
+   margin: 0;
+   right: 1rem;
+}
+[data-modal="entrar"]{
+   color: #fff;
+   background-color: rgb(41, 228, 104);
+   padding: 1rem;
+   border-radius: 5px;
+}
+.li-nav [data-modal="entrar"]:hover{
+   background-color: rgb(179, 235, 179);
+   opacity: 0.9;
+   border: 2px solid #fff; 
+}
+
+/*section descricao-animais*/
+.grid{
+   grid-column: 2/4; /*DEFINE O INICIO E FIM DO GRID: usar o inspecionar e analisar as colunas atraves do <body>*/
+   width: 100%;
+   box-sizing: border-box;
+   padding: 10px;
+   display: grid;
+   grid-template-columns: 100px 300px 1fr;
+   grid-gap: 20px; /*distancia entre grids*/
+}  
+.ul-imagens {
+   height: 370px;
+   overflow-y: scroll;
+   grid-column: 2;
+}
+.ul-imagens::-webkit-scrollbar{
+   width:20px;
+}
+.ul-imagens::-webkit-scrollbar-thumb{
+   background-color: #fb5;
+   border-left: 4px solid rgb(255, 234, 196);
+   border-right: 4px solid rgb(255, 234, 196);;
+}
+.titulo{
+   font-family: georgia;
+   font-size: 6rem;
+   font-weight: lighter;
+   grid-column: 1/4;
+}
+.descricao-animais p{
+   font-family: Helvetica;
+   line-height: 1;
+   margin-bottom: 1rem;
+}
+.descricao-animais h2{
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   margin-bottom: 20px;
+   color: #e54;
+   font-size: 18px;
+}
+.descricao-animais h2::before{ /*estilo(retangulo laranja) antes do texto*/
+   content: '';
+   display: inline-block;
+   width: 40px;
+   height: 10px;
+   background-color: #fb5;
+   margin-right: 10px;
+}
+.desc{
+   grid-column: 3;
+}
+.desc section{
+   margin-bottom: 100px;
+}
+.ul-imagens li{
+   list-style-type: none;
+}
+/*faq*/
+.faq{
+   grid-column: 2/4;
+   display: inline-block;
+}
+.faq dt{
+   font-family: monospace;
+   color: #e54; /*vermelho claro*/
+   font-weight: bold;
+   margin-top: 30px;
+   font-size: 1.3rem;
+   cursor: pointer;
+}
+.faq dt::before{ /**/
+   content: ''; /**/
+   display: inline-block;/**/
+   background-color: #fb5; /*amarelo claro*/
+   margin-right: 15px;
+
+   height: 10px;/**/
+   width: 30px;/**/
+}
+.faq dt::after{
+   content: '▼';
+   margin-left: 2rem;
+   font-size: 1.5rem;
+}
+.faq dt::after.showdd{
+   content: '▲';
+}
+.faq dd{
+   margin-bottom: 30px;
+   margin-left: 45px;
+   font-family: Helvetica,Arial; /*fontes para paragrafo*/
+}
+
+/*contato*/
+.div-iframe{
+   grid-column: 2;
+}
+.ul-contato{
+   grid-column: 4;
+   list-style-type: none;
+   
+}
+.ul-contato li{
+   margin-bottom: 1rem;
+   margin-right: -50px;
+
+}
+.ul-contato li::before{
+   content: '';
+   display: inline-block;
+   height: 10px;
+   width: 30px;
+   background-color: #fb5;
+
+   margin-right: 10px;
+}
+
+/*footer*/
+.div-footer{
+   grid-column: 3/5;
+   background-color: rgb(247, 170, 55);
+   padding: 20px;
+   font-family: monospace;
+}
+.div-footer p{
+   text-align: center;
+   font-weight: bold;
+   font-size: 1rem;
+}
+
+/*js*/
+.hidden{
+   display: none;
+}
+.showright{ /*animation de aparecer suave*/
+   display: block;
+   animation: show-right 1.5s forwards;
+}
+@keyframes show-right{
+   from{
+      transform: translate3d(-8rem,0,0);
+      opacity: 0;
+   }
+   to{
+      transform: translate3d(0,0,0);
+      opacity: 1;
+   }
+}
+.showdown{ /*animation de aparecer suave*/
+   display: block;
+   animation: show-down 1.5s forwards;
+}
+@keyframes show-down{
+   from{
+      transform: translate3d(0,8rem,0);
+      opacity: 0;
+   }
+   to{
+      transform: translate3d(0,0,0);
+      opacity: 1;
+   }
+}
+
+/*accordion*/
+.showdd{
+   display: block;
+   animation: animationdd 2s forwards;
+}
+@keyframes animationdd{
+   from{
+      max-height: 0;
+      opacity: 0;
+   }
+   to{
+      max-height: 6rem;
+      opacity: 1;
+   }
+}
+h3{
+   font-size: 1rem;
+   color:rgb(209, 133, 18);
+   animation: animation-h3 3s forwards;
+}
+@keyframes animation-h3{
+   from{
+      transform: scale(0);
+      opacity: 0;
+      font-size: 1rem;
+   }
+   to{
+      transform: scale(1.1);
+      color: #222;
+      opacity: 1;
+      font-size: 1.3rem;
+   }
+}
+/*section show suave*/
+.js-section{
+   opacity: 0;  
+}
+.showsection{
+   opacity: 1;
+   animation: animasection 1.5s forwards;
+}
+@keyframes animasection{
+   from{
+      opacity: 0;
+      transform: translate3d(-15rem,0,0);
+   }
+   to{
+      opacity: 1;
+      transform: translate3d(0,0,0);
+   }
+}
