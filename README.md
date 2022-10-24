@@ -14,4 +14,4 @@
  <h3 font-weight="bold" text-align="center">4️⃣- Modal</h3>
  <img src="https://user-images.githubusercontent.com/74941958/197435780-62f16437-53ef-4026-a6b7-baaadc24d39f.gif" height="350">
 
- <h3 font-weight="bold" text-align="center"> ♾️ - Entre outros: acesse o site</h3>
+ <h3 font-weight="bold" text-align="center"> ♾️ - Entre outros: acesse a página</h3>
