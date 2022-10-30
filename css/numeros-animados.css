@@ -1,0 +1,29 @@
+.grid-animais{
+    display: grid;
+    grid-column: 2 / 4;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6rem;
+}
+.animal{
+    margin-bottom: 2rem;
+}
+.animal h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.3rem;
+    color: rgb(226, 76, 49);
+}
+.animal h3::before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(226, 76, 49);
+    margin: 0 0.7rem 0.4rem 0;
+    
+}
+[data-anima="numero"]{
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: #222;
+    font-weight: bolder;
+}
