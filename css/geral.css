@@ -244,11 +244,7 @@
       opacity: 1;
    }
 }
-h3{
-   font-size: 1rem;
-   color:rgb(209, 133, 18);
-   animation: animation-h3 3s forwards;
-}
+
 @keyframes animation-h3{
    from{
       transform: scale(0);

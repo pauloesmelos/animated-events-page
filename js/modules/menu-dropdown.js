@@ -3,19 +3,35 @@ export default function initDropDown(){
 }
 let li_dropdown = document.querySelectorAll('[data-dropdown]');
 let menu_dropdown = document.querySelectorAll('.menu-dropdown');
-let html = document.documentElement;
+let eventos = ['click','touchstart'];
 
-['click','touchstart'].forEach((e) => {
+eventos.forEach((e) => {
     li_dropdown.forEach((elemento) => elemento.addEventListener(e,active));
 });
 function active(event){
+
     event.preventDefault();
-    event.target.nextElementSibling.classList.toggle('active');
+    if(event.target.nextElementSibling){
+        event.target.nextElementSibling.classList.toggle('active');
+        outsideClick(this);
+    }   
 }
+
 /*clique fora do drodpwn fecha o menu*/
-html.addEventListener('click',exitClickHtml);
-function exitClickHtml(event){
-    if(event.target.getAttribute('class') !== 'a-nav'){
-        menu_dropdown.forEach((e) => e.classList.remove('active'));
-    }
+function outsideClick(elemento){
+    const estado = 'data-dpAtivo';//impede vários eventos serem chamados juntos
+    let html = document.documentElement;
+    if(!elemento.hasAttribute(estado)){
+        eventos.forEach((e) => {
+            html.addEventListener(e,activeOutside);
+            elemento.setAttribute(estado,'');
+        });
+       function activeOutside(event){
+            if(!elemento.contains(event.target)){
+                menu_dropdown.forEach(menu => menu.classList.remove('active'));
+                eventos.forEach(events => html.removeEventListener(events,activeOutside));
+                elemento.removeAttribute(estado);
+            }
+       }
+    } 
 }
