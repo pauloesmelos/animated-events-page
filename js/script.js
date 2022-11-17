@@ -6,7 +6,9 @@ import initModal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropDown from './modules/menu-dropdown.js';
 import initMenuMobile from './modules/menu-mobile.js';
-import initAnimateNumbers from './modules/numeros-animados.js';
+import initDateHour from './modules/data-horario.js';
+import initFetch from './modules/animais-fetch.js';
+import initBitcoin from './modules/bitcoin-fetch.js';
 import * as configuracao from './modules/configuracao.js';
 
 //chamada
@@ -18,4 +20,6 @@ initModal();
 initTooltip();
 initDropDown();
 initMenuMobile();
-initAnimateNumbers();
+initDateHour();
+initFetch();
+initBitcoin();

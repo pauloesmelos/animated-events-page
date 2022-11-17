@@ -5,7 +5,7 @@ let button_open = document.querySelector('.button');
 let ul_menu = document.querySelector('.ul-nav');
 let nav = document.querySelector('.menu-nav');
 let html = document.documentElement;
-let events = ['click','touchstart'];
+let events = ['click','touchstart','onclick'];
 let botaoAtivo = 'data-ativo';
 
 events.forEach((e) => button_open.addEventListener(e,openmenu));

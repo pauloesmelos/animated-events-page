@@ -276,3 +276,10 @@
       transform: translate3d(0,0,0);
    }
 }
+/*.btc*/
+.btc{
+   padding: .3rem;
+   color: #222;
+   font-weight: bolder;
+   background-color: rgb(96, 243, 120);
+}

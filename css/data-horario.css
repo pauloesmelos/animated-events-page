@@ -1,0 +1,32 @@
+[data-horario]::after{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: .5rem;
+    background-color: #e54;
+    border: 3px solid #222;
+    animation: close 3s infinite;
+}
+[data-horario].ativo::after{
+    background-color: #3f4;
+    animation: open 3s infinite;
+}
+
+@keyframes open{
+    from{
+        background-color: #3f4;
+    }
+    to{
+        background-color: rgb(8, 189, 23);
+    }
+}
+@keyframes close{
+    from{
+        background-color: #e54;
+    }
+    to{
+        background-color: rgb(214, 35, 15);
+    }
+}
