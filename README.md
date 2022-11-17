@@ -14,7 +14,7 @@
  <h3 font-weight="bold" text-align="center">4️⃣- Smoth Scroll</h3>
  <img src="https://user-images.githubusercontent.com/74941958/197435241-080212a5-151e-4c2c-9691-d841214aac55.gif" height="350">
  
- <h3 font-weight="bold" text-align="center">3️⃣- Nav Tabs</h3>
+ <h3 font-weight="bold" text-align="center">5️⃣- Nav Tabs</h3>
  <img src="https://user-images.githubusercontent.com/74941958/197435568-008cde85-e63b-49ba-8db4-9d6f93421cb3.gif" height="350">
   
  <h3 font-weight="bold" text-align="center">6️⃣- Modal</h3>
